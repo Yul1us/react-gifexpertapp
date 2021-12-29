@@ -2,8 +2,13 @@
 
 // import React from 'react'
 
-import { useState } from "react"
-import { useEffect } from "react/cjs/react.development";
+import { useState, useEffect } from "react"
+
+//Nota muy importante...
+//Esta linea (import { useEffect } from "react/cjs/react.development";) no dejaba la aplicacion funcionar en los servidores de Github...
+//se coloco en esta linea -> y todo listo... 
+//import { useState, useEffect } from "react"
+// import { useEffect } from "react/cjs/react.development";
 import { getGifs } from "../helpers/getGifs";
 
 export const useFetchGifs = ( category ) => {
